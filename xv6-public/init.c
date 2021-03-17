@@ -20,13 +20,15 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "LinkStarto\n");
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
       exit();
     }
     if(pid == 0){
+	  // Cuando cambio el sh por ls al comenzar el SO no deja de imprimir sus contenidos en loop.
+	  // Falla al ejecutar ya que no hay programa y se loopea
       exec("sh", argv);
       printf(1, "init: exec sh failed\n");
       exit();
