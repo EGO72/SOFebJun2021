@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 void signalHandler(int sig){
+    wait(NULL);
     exit(0);
 
 }
