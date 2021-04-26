@@ -5,7 +5,7 @@
 int varGlobal;
 
 void signalHandler(int sig){
-	printf("Recibi segnal %d\n",sig);
+	printf("\nRecibi segnal %d\n",sig);
 	if (sig == 2){
 		varGlobal = 1;
 	}
